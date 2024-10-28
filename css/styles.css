@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  border-radius: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.contenedor-grid-index {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-gap: 16px;
+  align-items: center;
+  padding: 16px;
+}
+
+ul {
+  display: flex; /*Este flex afecta a los elementos dentro del UL en el header*/
+  flex-direction: row;
+  list-style: none;
+  padding: 16px;
+  /* align-items: center; */
+}
+
+li {
+  padding: 8px;
+}
+
+.tarjeta {
+  height: 310px;
+  width: 310px;
+  background-color: #ccc;
+  display: flex; /*Este flex afecta a los elementos dentro de la tarjeta*/
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+}
+
+.imagen img {
+  padding: 4px;
+  width: 80%;
+  max-height: 300px;
+}
+
+.imagen {
+  display: flex; /*Este flex afecta a los elementos dentro del DIV img*/
+  justify-content: center;
+  align-items: center;
+}
+
+.icono img {
+  width: 2.5em;
+  height: 2.5em;
+  /* margin: 2px; */
+}
+
+.icono-info {
+width: 32px;
+height: 32px;
+}
+
+.parrafo {
+  padding: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  /*text-transform: capitalize; capitalize no funciona porque
+  la font-family 'Bebas Neue' no tiene minúsculas*/
+}
+
+.descripcion {
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.nombre-tipo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 8px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 8px;
+  color: #000000;
+}
+
+.item-cuatro h2 {
+  text-align: left;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 8px;
+  color: #0000006e;
+}
+
+.nombre-tipo h3 {
+  font-size: 1.5rem;
+  color: rgb(82, 82, 82);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a{
+  color: red;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ccc;
+}
+
+.contenedor-grid {
+  width: 100%;
+  height: auto;
+  grid-gap: 8px;
+  /* align-items: self-start; */
+  display: grid;
+  grid-template-rows: 150px 1fr auto;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "nombre info"
+    "foto   info"
+    "dato   info";
+
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.item-uno {
+grid-area: nombre;
+max-height: 150px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.item-dos {
+  grid-area:foto ;
+ 
+}
+
+.item-tres {
+  grid-area: dato;
+
+}
+
+.item-cuatro {
+  grid-area: info;
+
+}
+
+.apariencia, .ecologia {
+  text-align: left;
+  padding-left: 4px;
+}
+
+/* Breakpoints para MAIN */
+
+@media (max-width: 600px) {
+  main {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* Breakpoints para INFO */
+
+@media (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nombre"
+      "foto"
+      "dato"
+      "info";
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contenedor-grid {
+    grid-template-rows: 150px 1fr auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "nombre info"
+      "foto info"
+      "dato info";
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-grid {
+  grid-template-rows: 150px 1fr auto;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "nombre info"
+    "foto info"
+    "dato info";
+  }
+}
+
+.dejanos-tu-mensaje{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dejanos-tu-mensaje{
+  display: flex;
+}
+
+.nombre-nosotros, .email-nosotros, .mensaje-nosotros{
+  padding: 16px;
+
+}
+
+.nombre, .email, .mensaje{
+  display: flex;
+  padding-left: 8px;
+  min-height: 32px;
+    max-width: 500px;
+}
+
+.mensaje{
+  min-height: 128px;
+}
+
+.objetivo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.objetivo p{
+  width: 90%;
+}
