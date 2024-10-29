@@ -183,10 +183,11 @@ footer {
 }
 
 .item-dos {
-  grid-area: foto;
+  grid-area:foto ;
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .item-tres {
