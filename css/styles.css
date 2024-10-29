@@ -177,6 +177,9 @@ align-items: center;
 
 .item-dos {
   grid-area:foto ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  
 }
 
