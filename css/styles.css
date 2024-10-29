@@ -17,7 +17,7 @@ header {
 }
 
 .contenedor-grid-index {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: repeat(4, 1fr); */
   grid-gap: 16px;
@@ -69,8 +69,8 @@ li {
 }
 
 .icono-info {
-width: 32px;
-height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .parrafo {
@@ -123,7 +123,7 @@ h3 {
 }
 
 .nombre-tipo h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: rgb(82, 82, 82);
 }
 
@@ -132,7 +132,15 @@ a {
   color: black;
 }
 
-footer a{
+.contenedor-grid-index a {
+  max-width: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+footer a {
   color: red;
 }
 
@@ -157,7 +165,6 @@ footer {
     "nombre info"
     "foto   info"
     "dato   info";
-
 }
 
 .grid-item {
@@ -167,30 +174,31 @@ footer {
 }
 
 .item-uno {
-grid-area: nombre;
-max-height: 150px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  grid-area: nombre;
+  max-height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-dos {
-  grid-area:foto ;
- 
+  grid-area: foto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-tres {
   grid-area: dato;
-
 }
 
 .item-cuatro {
   grid-area: info;
-
 }
 
-.apariencia, .ecologia {
+.apariencia,
+.ecologia {
   text-align: left;
   padding-left: 4px;
 }
@@ -211,7 +219,6 @@ align-items: center;
   }
 }
 
-
 /* Breakpoints para INFO */
 
 @media (max-width: 768px) {
@@ -226,7 +233,6 @@ align-items: center;
   }
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .contenedor-grid {
     grid-template-rows: 150px 1fr auto;
@@ -240,48 +246,97 @@ align-items: center;
 
 @media (min-width: 1024px) {
   .contenedor-grid {
-  grid-template-rows: 150px 1fr auto;
-  grid-template-columns: auto auto;
-  grid-template-areas:
-    "nombre info"
-    "foto info"
-    "dato info";
+    grid-template-rows: 150px 1fr auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "nombre info"
+      "foto info"
+      "dato info";
   }
 }
 
-.dejanos-tu-mensaje{
+.dejanos-tu-mensaje {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.dejanos-tu-mensaje{
+.dejanos-tu-mensaje {
   display: flex;
 }
 
-.nombre-nosotros, .email-nosotros, .mensaje-nosotros{
+.nombre-nosotros,
+.email-nosotros,
+.mensaje-nosotros {
   padding: 16px;
-
 }
 
-.nombre, .email, .mensaje{
+.nombre,
+.email,
+.mensaje {
   display: flex;
   padding-left: 8px;
   min-height: 32px;
-    max-width: 500px;
+  max-width: 500px;
 }
 
-.mensaje{
+.mensaje {
   min-height: 128px;
 }
 
-.objetivo{
-  display:flex;
+.objetivo {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.objetivo p{
+.objetivo p {
   width: 90%;
+}
+
+.tarjeta {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+}
+
+.nombre-tipo {
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(35, 91, 128, 0.8);
+}
+
+h1 img {
+  width: 100%;
+  height: auto;
+}
+
+.boton-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 16px;
 }
