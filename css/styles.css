@@ -16,6 +16,13 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
 .contenedor-grid-index {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -204,27 +211,12 @@ footer {
   padding-left: 4px;
 }
 
-/* Breakpoints para MAIN */
-
-/* @media (max-width: 600px) {
-  main {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-  main {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-} */
-
-/* Estilos base (pantallas grandes) */
 .contenedor-grid-index {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .tarjeta {
@@ -236,162 +228,6 @@ footer {
 .tarjeta:hover {
   transform: scale(1.05);
 }
-
-/* Escritorio grande (mínimo 1200px) */
-@media (max-width: 1200px) {
-  .contenedor-grid-index {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
-  }
-}
-
-/* Laptops (entre 992px y 1200px) */
-@media (max-width: 992px) {
-  .contenedor-grid-index {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
-  }
-
-  .tarjeta {
-    padding: 12px;
-  }
-}
-
-/* Tablets (entre 768px y 992px) */
-@media (max-width: 768px) {
-  .contenedor-grid-index {
-    grid-template-columns: 1fr;
-    grid-gap: 12px;
-  }
-
-  .tarjeta {
-    padding: 10px;
-  }
-}
-
-/* Móviles (hasta 576px) */
-@media (max-width: 576px) {
-  .contenedor-grid-index {
-    grid-template-columns: 1fr;
-    grid-gap: 8px;
-  }
-
-  .tarjeta {
-    padding: 8px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  .icono img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-
-/* Breakpoints para INFO */
-
-/* @media (max-width: 768px) {
-  .contenedor-grid {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nombre"
-      "foto"
-      "dato"
-      "info";
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .contenedor-grid {
-    grid-template-rows: 150px 1fr auto;
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "nombre info"
-      "foto info"
-      "dato info";
-  }
-}
-
-@media (min-width: 1024px) {
-  .contenedor-grid {
-    grid-template-rows: 150px 1fr auto;
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "nombre info"
-      "foto info"
-      "dato info";
-  }
-} */
-
-.contenedor-grid {
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-gap: 8px;
-  grid-template-rows: 150px 1fr auto;
-  grid-template-columns: auto auto;
-  grid-template-areas:
-    "nombre info"
-    "foto   info"
-    "dato   info";
-}
-
-@media (max-width: 1200px) {
-  .contenedor-grid {
-    grid-template-rows: 150px auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "nombre info"
-      "foto   info"
-      "dato   info";
-  }
-}
-
-@media (max-width: 992px) {
-  .contenedor-grid {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nombre"
-      "foto"
-      "info"
-      "dato";
-  }
-}
-
-@media (max-width: 768px) {
-  .contenedor-grid {
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nombre"
-      "foto"
-      "dato"
-      "info";
-  }
-}
-
-@media (max-width: 576px) {
-  .contenedor-grid {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nombre"
-      "foto"
-      "dato"
-      "info";
-    grid-gap: 4px;
-  }
-}
-
 
 .dejanos-tu-mensaje {
   display: flex;
@@ -477,4 +313,129 @@ h1 img {
   align-items: center;
   padding: 8px;
   margin-bottom: 16px;
+}
+
+/*Media Queries para INDEX*/
+@media (max-width: 1200px) {
+  .contenedor-grid-index {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .contenedor-grid-index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tarjeta {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-grid-index {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tarjeta {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contenedor-grid-index {
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tarjeta {
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .icono img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/*Media Queries para INFO*/
+.contenedor-grid {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-gap: 8px;
+  grid-template-rows: 150px 1fr auto;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "nombre info"
+    "foto   info"
+    "dato   info";
+}
+
+@media (max-width: 1200px) {
+  .contenedor-grid {
+    grid-template-rows: 150px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "nombre info"
+      "foto   info"
+      "dato   info";
+  }
+}
+
+@media (max-width: 992px) {
+  .contenedor-grid {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nombre"
+      "foto"
+      "info"
+      "dato";
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nombre"
+      "foto"
+      "dato"
+      "info";
+  }
+}
+
+@media (max-width: 576px) {
+  .contenedor-grid {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nombre"
+      "foto"
+      "dato"
+      "info";
+    grid-gap: 4px;
+  }
 }
