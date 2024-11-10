@@ -1,0 +1,231 @@
+/* Reset y estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  h1, h2, h3 {
+    padding: 8px;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: #0000006e;
+  }
+  
+  h1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(35, 91, 128, 0.8);
+  }
+  
+  /* Estructura de página */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  footer a {
+    color: red;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    padding: 8px;
+  }
+  
+  /* Grid */
+  .contenedor-grid-index,
+  .contenedor-grid {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenedor-grid-index {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .contenedor-grid {
+    width: 100%;
+    grid-template-areas:
+      "nombre"
+      "foto"
+      "info"
+      "dato";
+  }
+  
+  .grid-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .item-uno { grid-area: nombre; }
+  .item-dos { grid-area: foto; }
+  .item-tres { grid-area: dato; }
+  .item-cuatro { grid-area: info; }
+  
+  /* Tarjeta */
+  .tarjeta {
+    width: 310px;
+    height: 310px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Imagen */
+  .imagen img {
+    width: 80%;
+    height: auto;
+    padding: 4px;
+  }
+  
+  /* Iconos */
+  .icono img,
+  .icono-info {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  
+  /* Textos */
+  .parrafo, .descripcion {
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .parrafo {
+    font-size: 1.5rem;
+  }
+  
+  .nombre-tipo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .nombre-tipo h3 {
+    color: rgb(82, 82, 82);
+  }
+  
+  /* Formulario */
+  .dejanos-tu-mensaje, .objetivo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nombre-nosotros, .email-nosotros, .mensaje-nosotros,
+  .nombre, .email, .mensaje {
+    padding: 16px;
+    max-width: 500px;
+  }
+  
+  .mensaje {
+    min-height: 128px;
+  }
+  
+  .boton-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 576px) {
+    .contenedor-grid-index { grid-template-columns: 1fr; }
+  }
+  
+  @media (min-width: 768px) {
+    .contenedor-grid-index { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  @media (min-width: 992px) {
+    .contenedor-grid-index { grid-template-columns: repeat(3, 1fr); }
+    .tarjeta { padding: 12px; }
+  }
+  
+  @media (min-width: 1200px) {
+    .contenedor-grid-index { grid-template-columns: repeat(4, 1fr); }
+    .contenedor-grid {
+      grid-template-rows: 150px 1fr auto;
+      grid-template-columns: auto auto;
+      grid-template-areas:
+        "nombre info"
+        "foto info"
+        "dato info";
+    }
+  }
