@@ -113,6 +113,7 @@ ul li {
 .grid-item {
   border: 1px solid #ccc;
   padding: 8px;
+  border-radius: 16px;
   text-align: center;
 }
 .grid-item.item-uno {
