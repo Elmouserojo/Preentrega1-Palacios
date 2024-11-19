@@ -26,38 +26,21 @@
       </nav>
     </header>
     <main>
-      <form class="dejanos-tu-mensaje">
-        <div class="nombre-nosotros">
-          <label for="nombre">Nombre y Apellido</label>
-          <input
-            class="nombre"
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Juan Perez"
-          />
-        </div>
-        <div class="email-nosotros">
-          <label for="email">E-mail</label>
-          <input 
-            class="email" 
-            type="email" 
-            id="email" 
-            name="email" 
-            placeholder="ejemplo@email.com" 
-          />
-        </div>
-        <div class="mensaje-nosotros">
-          <label for="mensaje">Dejanos tu mensaje</label>
-          <textarea
-            class="mensaje"
-            id="mensaje"
-            name="mensaje"
-            placeholder="Redacta un bonito mensaje."
-          ></textarea>
-        </div>
-        <button type="submit" class="boton-enviar">Enviar</button>
-      </form>
+      <div class="contact-form">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/xpwzrgwz" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
   </main>
 
