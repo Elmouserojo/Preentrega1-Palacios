@@ -1,287 +1,420 @@
 /* Reset y estilos globales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Bebas Neue", sans-serif;
-  }
-  
-  html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  h1, h2, h3 {
-    padding: 8px;
-    color: #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-    color: #0000006e;
-  }
-  
-  h1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(35, 91, 128, 0.8);
-  }
-  
-  /* Estructura de página */
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ccc;
-    width: 100%;
-  }
-  
-  footer a {
-    color: red;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  li {
-    padding: 8px;
-  }
-  
-  /* Grid */
-  .contenedor-grid-index,
-  .contenedor-grid {
-    display: grid;
-    gap: 16px;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .contenedor-grid-index {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-  .contenedor-grid {
-    width: 100%;
-    grid-template-areas:
-      "nombre"
-      "foto"
-      "info"
-      "dato";
-  }
-  
-  .grid-item {
-    border: 1px solid #ccc;
-    padding: 8px;
-    border-radius: 16px;
-    text-align: center;
-  }
-  
-  .item-uno { grid-area: nombre; }
-  .item-dos { grid-area: foto; }
-  .item-tres { grid-area: dato; }
-  .item-cuatro { grid-area: info; }
-  
-  /* Tarjeta */
-  .tarjeta {
-    width: 310px;
-    height: 310px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #ccc;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .tarjeta:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Imagen */
-  .imagen img {
-    width: 80%;
-    height: auto;
-    padding: 4px;
-  }
-  
-  /* Iconos */
-  .icono img,
-  .icono-info {
-    width: 2.5em;
-    height: 2.5em;
-  }
-  
-  /* Textos */
-  .parrafo, .descripcion {
-    padding: 8px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .parrafo {
-    font-size: 1.5rem;
-  }
-  
-  .nombre-tipo {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .nombre-tipo h3 {
-    color: rgb(82, 82, 82);
-  }
-  
-  /* Formulario */
-  .dejanos-tu-mensaje, .objetivo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nombre-nosotros, .email-nosotros, .mensaje-nosotros,
-  .nombre, .email, .mensaje {
-    padding: 16px;
-    max-width: 500px;
-  }
-  
-  .mensaje {
-    min-height: 128px;
-  }
-  
-  .boton-enviar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    margin-bottom: 16px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  border-radius: 8px;
+}
 
-  .contact-form {
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 450px;
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  padding: 8px;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #0000006e;
+}
+
+h1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(35, 91, 128, 0.8);
+
+}
+
+/* Estructura de página */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: transparent;
+  width: 100%;
+}
+
+footer a {
+  color: red;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  padding: 8px;
+}
+
+/* Grid */
+.contenedor-grid-index,
+.contenedor-grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-grid-index {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.contenedor-grid {
+  width: 100%;
+  grid-template-areas:
+    "nombre"
+    "foto"
+    "info"
+    "dato";
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.item-uno {
+  grid-area: nombre;
+  backdrop-filter: blur(30px);
+}
+
+.item-dos {
+  grid-area: foto;
+  backdrop-filter: blur(30px);
+}
+
+.item-tres {
+  grid-area: dato;
+  backdrop-filter: blur(30px);
+}
+
+.item-cuatro {
+  grid-area: info;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Sombra negra semitransparente */
+  backdrop-filter: blur(30px);
+}
+
+/* Tarjeta */
+.tarjeta {
+  width: 310px;
+  height: 310px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #ccc;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen */
+.imagen img {
+  width: 100%;
+  height: auto;
+  padding: 4px;
+}
+
+.imagen {
+  width: 80%;
+  height: auto;
+  padding: 4px;
+}
+
+/* Iconos */
+.icono img,
+.icono-info {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+/* Textos */
+.parrafo,
+.descripcion {
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.parrafo {
+  font-size: 1rem;
+}
+
+.nombre-tipo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nombre-tipo h3 {
+  color: rgb(82, 82, 82);
+}
+
+/* Formulario */
+.dejanos-tu-mensaje,
+.objetivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre-nosotros,
+.email-nosotros,
+.mensaje-nosotros,
+.nombre,
+.email,
+.mensaje {
+  padding: 16px;
+  max-width: 500px;
+}
+
+.mensaje {
+  min-height: 128px;
+}
+
+.boton-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 450px;
 }
 
 .contact-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }
 
 .contact-form label {
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
 }
 
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .contact-form textarea {
-    resize: none;
-    height: 100px;
+  resize: none;
+  height: 100px;
 }
 
 .contact-form button {
-    background-color: #8a0d0d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
+  background-color: #084fa0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 .contact-form button:hover {
-    background-color: #ac1818;
+  background-color: #145bac;
 }
 
-  
-  /* Media Queries */
-  @media (min-width: 576px) {
-    .contenedor-grid-index { grid-template-columns: 1fr; }
+@keyframes animacionEnlace {
+  0% {
+    color: #000;
+    transform: scale(1);
   }
-  
-  @media (min-width: 768px) {
-    .contenedor-grid-index { grid-template-columns: repeat(2, 1fr); }
+
+  50% {
+    color: #084fa0;
+    transform: scale(1.2);
   }
-  
-  @media (min-width: 992px) {
-    .contenedor-grid-index { grid-template-columns: repeat(3, 1fr); }
-    .tarjeta { padding: 12px; }
+
+  100% {
+    color: #000;
+    transform: scale(1);
   }
-  
-  @media (min-width: 1200px) {
-    .contenedor-grid-index { grid-template-columns: repeat(4, 1fr); }
-    .contenedor-grid {
-      grid-template-rows: 150px 1fr auto;
-      grid-template-columns: auto auto;
-      grid-template-areas:
-        "nombre info"
-        "foto info"
-        "dato info";
-    }
+}
+
+/* Aplicación de la animación al enlace */
+.anterior,
+.siguiente {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: animacionEnlace 2s infinite;
+}
+
+/* Sección objetivo */
+.objetivo {
+  backdrop-filter: blur(30px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Sombra negra semitransparente */
+
+/* Fondo suave para hacer que el texto resalte */
+padding: 40px 20px;
+/* Mayor espacio alrededor del contenido */
+text-align: center;
+/* Centrar el texto */
+max-width: 1200px;
+/* Limitar el ancho máximo */
+margin: 0 auto;
+/* Centrado de la sección */
+font-family: "Roboto",
+sans-serif;
+/* Fuente más legible para el texto largo */
+color: #333;
+/* Color de texto oscuro para mayor contraste */
+line-height: 1.6;
+/* Aumentar el espacio entre líneas para mayor legibilidad */
+}
+
+/* Títulos */
+.objetivo h2 {
+  font-size: 2.5rem;
+  /* Aumentar el tamaño de fuente del título */
+  font-weight: bold;
+  /* Hacer el título más destacado */
+  color: #333;
+  /* Color oscuro para el título */
+  margin-bottom: 20px;
+  /* Espacio debajo del título */
+  text-transform: uppercase;
+  /* Título en mayúsculas para destacarlo más */
+}
+
+/* Texto de la sección */
+.objetivo p {
+  font-size: 1.125rem;
+  /* Tamaño de texto cómodo para lectura */
+  color: #fffbfb;
+  /* Color de texto ligeramente más claro */
+  max-width: 900px;
+  /* Limitar el ancho del texto para evitar que se extienda demasiado */
+  margin: 0 auto 20px;
+  /* Centrar el texto y darle espacio abajo */
+  text-align: justify;
+  /* Justificar el texto para un acabado más limpio */
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) {
+  .contenedor-grid-index {
+    grid-template-columns: 1fr;
   }
+}
+
+@media (min-width: 768px) {
+  .contenedor-grid-index {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .contenedor-grid-index {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tarjeta {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor-grid-index {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contenedor-grid {
+    grid-template-rows: 150px 1fr auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "nombre info"
+      "foto info"
+      "dato info";
+  }
+}
