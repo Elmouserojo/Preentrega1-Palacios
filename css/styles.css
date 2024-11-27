@@ -39,6 +39,7 @@ h3 {
 
 h1 {
   font-size: 2rem;
+  
 }
 
 h2 {
@@ -179,11 +180,11 @@ li {
   padding: 4px;
 }
 
-.imagen {
+/* .imagen {
   width: 80%;
   height: auto;
   padding: 4px;
-}
+} */
 
 /* Iconos */
 .icono img,
