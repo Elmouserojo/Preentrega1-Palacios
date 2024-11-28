@@ -1,0 +1,27 @@
+/* _media-queries.scss */
+@mixin media-query($size) {
+    @if $size == small {
+      @media (max-width: 576px) {
+        @content;
+      }
+    }
+  
+    @if $size == medium {
+      @media (min-width: 768px) {
+        @content;
+      }
+    }
+  
+    @if $size == large {
+      @media (min-width: 992px) {
+        @content;
+      }
+    }
+  
+    @if $size == xlarge {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  }
+  

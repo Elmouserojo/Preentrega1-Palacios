@@ -1,4 +1,3 @@
-@use 'media-queries' as mq;
 /* =============================
    Reset y estilos globales
 ============================= */
@@ -331,9 +330,9 @@
   }
   
   /* =============================
-   Media Queries
-============================= */
-@include mq.media-query(small) {
+     Media Queries
+  ============================= */
+  @media (max-width: 576px) {
     .contenedor-grid-index {
       grid-template-columns: 1fr;
     }
@@ -345,13 +344,13 @@
     }
   }
   
-  @include mq.media-query(medium) {
+  @media (min-width: 768px) {
     .contenedor-grid-index {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
-  @include mq.media-query(large) {
+  @media (min-width: 992px) {
     .contenedor-grid-index {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -361,7 +360,7 @@
     }
   }
   
-  @include mq.media-query(xlarge) {
+  @media (min-width: 1200px) {
     .contenedor-grid-index {
       grid-template-columns: repeat(4, 1fr);
     }
